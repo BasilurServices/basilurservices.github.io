@@ -371,7 +371,7 @@ main {
 /* ── Cards Grid ────────────────────────────────────────────── */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 26px;
 }
 
@@ -409,6 +409,10 @@ main {
 
 .card:nth-child(3) {
     animation-delay: 1.25s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 1.40s;
 }
 
 /* Card shimmer line */
@@ -532,6 +536,20 @@ main {
     box-shadow: 0 0 28px rgba(232, 115, 115, 0.2);
 }
 
+.card-4 .card-icon-wrap {
+    background: linear-gradient(135deg, rgba(82, 163, 235, 0.15), rgba(82, 163, 235, 0.06));
+    border: 1px solid rgba(82, 163, 235, 0.2);
+    box-shadow: 0 0 20px rgba(82, 163, 235, 0.08);
+}
+
+.card-4 .card-icon-wrap i {
+    color: #6fb6f0;
+}
+
+.card-4:hover .card-icon-wrap {
+    box-shadow: 0 0 28px rgba(82, 163, 235, 0.2);
+}
+
 /* Card badge */
 .card-badge {
     display: inline-block;
@@ -566,6 +584,12 @@ main {
     background: rgba(168, 152, 120, 0.12);
     color: var(--text-secondary);
     border: 1px solid rgba(168, 152, 120, 0.3);
+}
+
+.badge-blue {
+    background: rgba(82, 163, 235, 0.12);
+    color: #6fb6f0;
+    border: 1px solid rgba(82, 163, 235, 0.2);
 }
 
 /* Card title */
