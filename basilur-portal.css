@@ -306,6 +306,11 @@ h1.portal-title em {
     animation: pulse 2.5s ease-in-out infinite;
 }
 
+.status-pill.status-maintenance .status-dot {
+    background: #e8b45a;
+    box-shadow: 0 0 6px #e8b45a;
+}
+
 @keyframes pulse {
 
     0%,
@@ -557,6 +562,12 @@ main {
     border: 1px solid rgba(232, 115, 115, 0.2);
 }
 
+.badge-maintenance {
+    background: rgba(168, 152, 120, 0.12);
+    color: var(--text-secondary);
+    border: 1px solid rgba(168, 152, 120, 0.3);
+}
+
 /* Card title */
 .card-title {
     font-family: 'Cormorant Garamond', serif;
@@ -662,6 +673,25 @@ main {
 
 .btn-open:hover i {
     transform: translateX(4px);
+}
+
+.btn-open.btn-maintenance {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-muted);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-open.btn-maintenance:hover {
+    transform: none;
+    box-shadow: none;
+    color: var(--text-muted);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-open.btn-maintenance::before {
+    display: none;
 }
 
 /* ── Divider ───────────────────────────────────────────────── */
