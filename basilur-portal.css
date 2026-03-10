@@ -66,44 +66,62 @@ body::before {
 .bg-mesh::before {
     content: '';
     position: absolute;
-    width: 700px;
-    height: 700px;
+    width: 800px;
+    height: 800px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(201, 148, 58, 0.07) 0%, transparent 70%);
-    top: -200px;
+    background: radial-gradient(circle, rgba(201, 148, 58, 0.12) 0%, transparent 65%);
+    top: -250px;
     left: -200px;
-    animation: meshFloat1 18s ease-in-out infinite alternate;
+    animation: meshFloat1 15s ease-in-out infinite alternate;
+    will-change: transform;
 }
 
 .bg-mesh::after {
     content: '';
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: 700px;
+    height: 700px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(139, 90, 30, 0.06) 0%, transparent 70%);
-    bottom: -150px;
-    right: -100px;
-    animation: meshFloat2 22s ease-in-out infinite alternate;
+    background: radial-gradient(circle, rgba(139, 90, 30, 0.10) 0%, transparent 65%);
+    bottom: -200px;
+    right: -150px;
+    animation: meshFloat2 18s ease-in-out infinite alternate;
+    will-change: transform;
 }
 
 @keyframes meshFloat1 {
-    from {
-        transform: translate(0, 0) scale(1);
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
     }
 
-    to {
-        transform: translate(80px, 60px) scale(1.15);
+    33% {
+        transform: translate3d(400px, 200px, 0) scale(1.15);
+    }
+
+    66% {
+        transform: translate3d(150px, 500px, 0) scale(0.9);
+    }
+
+    100% {
+        transform: translate3d(600px, 150px, 0) scale(1.05);
     }
 }
 
 @keyframes meshFloat2 {
-    from {
-        transform: translate(0, 0) scale(1);
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
     }
 
-    to {
-        transform: translate(-60px, -80px) scale(1.1);
+    33% {
+        transform: translate3d(-350px, -250px, 0) scale(1.1);
+    }
+
+    66% {
+        transform: translate3d(-500px, -150px, 0) scale(0.85);
+    }
+
+    100% {
+        transform: translate3d(-200px, -450px, 0) scale(1.2);
     }
 }
 
@@ -113,20 +131,51 @@ body::before {
     pointer-events: none;
     z-index: 0;
     opacity: 0.04;
+    will-change: transform;
 }
 
 .leaf-deco.top-right {
     top: 40px;
     right: 60px;
-    transform: rotate(30deg);
     width: 180px;
+    transform-origin: center;
+    animation: swayTopRight 20s ease-in-out infinite alternate;
 }
 
 .leaf-deco.bot-left {
     bottom: 60px;
     left: 40px;
-    transform: rotate(-20deg);
     width: 140px;
+    transform-origin: center;
+    animation: swayBotLeft 22s ease-in-out infinite alternate;
+}
+
+@keyframes swayTopRight {
+    0% {
+        transform: rotate(30deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(38deg) translate3d(-15px, 20px, 0);
+    }
+
+    100% {
+        transform: rotate(26deg) translate3d(10px, -15px, 0);
+    }
+}
+
+@keyframes swayBotLeft {
+    0% {
+        transform: rotate(-20deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(-12deg) translate3d(15px, -20px, 0);
+    }
+
+    100% {
+        transform: rotate(-28deg) translate3d(-10px, 15px, 0);
+    }
 }
 
 /* ── Page Wrapper ──────────────────────────────────────────── */
@@ -924,5 +973,54 @@ footer {
 
     .info-bar {
         gap: 22px;
+    }
+
+    .card {
+        padding: 24px 20px 22px;
+    }
+
+    .card-icon-wrap {
+        width: 46px;
+        height: 46px;
+        margin-bottom: 16px;
+        border-radius: 12px;
+    }
+
+    .card-icon-wrap .fa-solid,
+    .card-icon-wrap .fa-regular {
+        font-size: 1.2rem;
+    }
+
+    .card-corner {
+        top: 12px;
+        right: 12px;
+        width: 22px;
+        height: 22px;
+    }
+
+    .card-badge {
+        margin-bottom: 8px;
+        font-size: 0.6rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .card-desc {
+        margin-bottom: 20px;
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .card-features {
+        margin-bottom: 20px;
+        gap: 6px;
+    }
+
+    .btn-open {
+        padding: 11px 18px;
+        font-size: 0.78rem;
     }
 }
