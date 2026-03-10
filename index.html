@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basilur Tea – Internal Systems Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="basilur-portal.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+
+  <!-- Loading screen -->
+  <div id="loader">
+    <img src="logo.png" alt="Basilur Tea" class="loader-logo-img">
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- Background decorations -->
+  <div class="bg-mesh"></div>
+
+  <!-- Decorative leaf SVGs -->
+  <svg class="leaf-deco top-right" viewBox="0 0 120 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M60 10 C100 30, 115 80, 100 130 C85 180, 40 195, 20 170 C0 145, 5 90, 20 60 C35 30, 20 15, 60 10Z"
+      fill="#c9943a" />
+    <path d="M60 10 L60 180" stroke="#c9943a" stroke-width="1.5" opacity="0.4" />
+    <path d="M40 50 C55 55, 65 55, 80 50" stroke="#c9943a" stroke-width="1" opacity="0.3" />
+    <path d="M30 80 C50 88, 70 88, 90 80" stroke="#c9943a" stroke-width="1" opacity="0.3" />
+    <path d="M25 110 C48 120, 72 120, 95 110" stroke="#c9943a" stroke-width="1" opacity="0.3" />
+  </svg>
+  <svg class="leaf-deco bot-left" viewBox="0 0 120 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M60 10 C100 30, 115 80, 100 130 C85 180, 40 195, 20 170 C0 145, 5 90, 20 60 C35 30, 20 15, 60 10Z"
+      fill="#c9943a" />
+    <path d="M60 10 L60 180" stroke="#c9943a" stroke-width="1.5" opacity="0.4" />
+    <path d="M40 50 C55 55, 65 55, 80 50" stroke="#c9943a" stroke-width="1" opacity="0.3" />
+    <path d="M30 80 C50 88, 70 88, 90 80" stroke="#c9943a" stroke-width="1" opacity="0.3" />
+  </svg>
+
+  <div class="page">
+
+    <!-- ── Header ───────────────────────────────────────────────── -->
+    <header>
+      <div class="logo-wrap">
+        <div class="logo-emblem">
+          <img src="logo.png" alt="Basilur Logo">
+        </div>
+        <div class="logo-text">
+          <div class="logo-brand">Basilur <span>Tea</span></div>
+          <div class="logo-tagline">Est. 2008 &nbsp;·&nbsp; Ceylon's Finest</div>
+        </div>
+      </div>
+
+      <div class="header-divider"></div>
+
+      <h1 class="portal-title">Internal Systems <em>Portal</em></h1>
+      <p class="portal-subtitle">Access company internal systems from one central place</p>
+
+      <div>
+        <span class="status-pill">
+          <span class="status-dot"></span>
+          All systems operational
+        </span>
+      </div>
+    </header>
+
+    <!-- ── Main ─────────────────────────────────────────────────── -->
+    <main>
+      <div class="section-label"><span>Available Systems</span></div>
+
+      <div class="cards-grid">
+
+        <!-- Card 1: IT Ticketing -->
+        <div class="card card-1">
+          <svg class="card-corner" viewBox="0 0 28 28" fill="none">
+            <path d="M28 0 L28 28 L0 28" stroke="rgba(201,148,58,0.4)" stroke-width="1" />
+          </svg>
+          <div class="card-icon-wrap">
+            <i class="fa-solid fa-ticket"></i>
+          </div>
+          <span class="card-badge badge-green">IT Support</span>
+          <h2 class="card-title">IT Ticketing System</h2>
+          <p class="card-desc">Submit, track, and resolve IT support requests. Stay updated on ticket status in
+            real-time and escalate issues as needed.</p>
+          <ul class="card-features">
+            <li><i class="fa-solid fa-diamond"></i>Submit new support tickets instantly</li>
+            <li><i class="fa-solid fa-diamond"></i>Track ticket status & priority</li>
+            <li><i class="fa-solid fa-diamond"></i>View resolution history</li>
+          </ul>
+          <a class="btn-open" href="https://basilurservices.github.io/Ticketing/" target="_blank" rel="noopener">
+            <span>Open System</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Card 2: Meeting Room -->
+        <div class="card card-2">
+          <svg class="card-corner" viewBox="0 0 28 28" fill="none">
+            <path d="M28 0 L28 28 L0 28" stroke="rgba(201,148,58,0.4)" stroke-width="1" />
+          </svg>
+          <div class="card-icon-wrap">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <span class="card-badge badge-gold">Facilities</span>
+          <h2 class="card-title">Meeting Room Booking</h2>
+          <p class="card-desc">Reserve meeting rooms, conference halls, and boardrooms. View availability and manage
+            upcoming reservations with ease.</p>
+          <ul class="card-features">
+            <li><i class="fa-solid fa-diamond"></i>Real-time room availability</li>
+            <li><i class="fa-solid fa-diamond"></i>Book rooms & boardrooms</li>
+            <li><i class="fa-solid fa-diamond"></i>Manage upcoming reservations</li>
+          </ul>
+          <a class="btn-open" href="https://pipisara.github.io/basilur.booking/" target="_blank" rel="noopener">
+            <span>Open System</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Card 3: Exit Pass -->
+        <div class="card card-3">
+          <svg class="card-corner" viewBox="0 0 28 28" fill="none">
+            <path d="M28 0 L28 28 L0 28" stroke="rgba(201,148,58,0.4)" stroke-width="1" />
+          </svg>
+          <div class="card-icon-wrap">
+            <i class="fa-solid fa-door-open"></i>
+          </div>
+          <span class="card-badge badge-red">Security</span>
+          <h2 class="card-title">Exit Pass System</h2>
+          <p class="card-desc">Request and manage employee exit permissions. Generate authorized exit passes and track
+            employee movement approvals.</p>
+          <ul class="card-features">
+            <li><i class="fa-solid fa-diamond"></i>Request exit permissions</li>
+            <li><i class="fa-solid fa-diamond"></i>Generate authorized exit passes</li>
+            <li><i class="fa-solid fa-diamond"></i>Track approval status</li>
+          </ul>
+          <a class="btn-open" href="https://pipisara.github.io/BasilurExitPass/" target="_blank" rel="noopener">
+            <span>Open System</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Ornament divider -->
+      <div class="ornament-divider">
+        <div class="ornament-gem"></div>
+      </div>
+
+      <!-- Info bar -->
+      <div class="info-bar">
+        <div class="info-item"><i class="fa-solid fa-shield-halved"></i> Secure Internal Access</div>
+        <div class="info-item"><i class="fa-solid fa-clock"></i> Available 24 / 7</div>
+        <div class="info-item"><i class="fa-solid fa-lock"></i> SSO Protected</div>
+        <div class="info-item"><i class="fa-solid fa-headset"></i> IT Support: Ext. 1100</div>
+      </div>
+    </main>
+
+    <!-- ── Footer ───────────────────────────────────────────────── -->
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">Basilur Tea</div>
+          <div class="footer-label">Internal IT Systems</div>
+        </div>
+        <div class="footer-right">
+          <span>For internal use only</span>
+          <div class="footer-dot"></div>
+          <span>IT Department</span>
+          <div class="footer-dot"></div>
+          <span id="footer-year"></span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- .page -->
+
+  <script src="basilur-portal.js"></script>
+</body>
+
+</html>
