@@ -41,3 +41,44 @@ cards.forEach(card => {
     card.style.transform = '';
   });
 });
+
+// ── Long press bypass for Maintenance cards ──────────────────────
+const maintenanceBtns = document.querySelectorAll('.btn-maintenance[data-bypass]');
+
+maintenanceBtns.forEach(btn => {
+  let pressTimer;
+  let isLongPress = false;
+
+  const startPress = (e) => {
+    if (e.type === 'mousedown' && e.button !== 0) return; // Only left click
+    const bypassUrl = btn.getAttribute('data-bypass');
+    if (!bypassUrl) return;
+
+    isLongPress = false;
+    pressTimer = setTimeout(() => {
+      isLongPress = true;
+      window.open(bypassUrl, '_blank');
+    }, 1000); // 1-second long press to bypass
+  };
+
+  const cancelPress = () => {
+    clearTimeout(pressTimer);
+  };
+
+  btn.addEventListener('touchstart', startPress, { passive: true });
+  btn.addEventListener('touchend', cancelPress);
+  btn.addEventListener('touchcancel', cancelPress);
+  
+  btn.addEventListener('mousedown', startPress);
+  btn.addEventListener('mouseup', cancelPress);
+  btn.addEventListener('mouseleave', cancelPress);
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault(); // Maintenance buttons normally do nothing
+  });
+
+  btn.addEventListener('contextmenu', (e) => {
+    // We prevent default context menu so it doesn't interrupt long press on mobile
+    e.preventDefault();
+  });
+});
